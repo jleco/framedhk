@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import SlidingPanel from "../components/SlidingPanel";
 
+
 export default function Home() {
   const [selectedSection, setSelectedSection] = useState("top");
   const [selectedBuilding, setSelectedBuilding] = useState(null);
