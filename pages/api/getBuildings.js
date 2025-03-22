@@ -1,9 +1,11 @@
+
 import fs from "fs";
 import path from "path";
 
 export default function handler(req, res) {
   try {
-    const filePath = path.join(process.cwd(), "data", "buildings.json");
+    // ✅ Update path to point to public/data folder for Vercel compatibility
+    const filePath = path.join(process.cwd(), "public", "data", "buildings.json");
     const fileContents = fs.readFileSync(filePath, "utf8");
     const buildings = JSON.parse(fileContents);
 
